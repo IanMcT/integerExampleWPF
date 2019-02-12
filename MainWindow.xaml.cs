@@ -1,4 +1,8 @@
-﻿using System;
+/*Ian McTavish
+ * Feb 11, 2019
+ * Example code for using integers
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +29,11 @@ namespace integerExample
             InitializeComponent();          
         }
 
+        /// <summary>
+        /// will output 4 - requires a TextBlock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProcess_Click(object sender, RoutedEventArgs e)
         {
             int x;//declare a variable
@@ -34,12 +43,18 @@ namespace integerExample
             txtOutput.Text = x.ToString(); //output the variable
         }
 
+        /// <summary>
+        /// Will output twice the value the user enters.
+        /// Requires TextBox and TextBlock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExample2_Click(object sender, RoutedEventArgs e)
         {
             int x;//declare a variable
             int.TryParse(txtInput.Text, out x);//assign a value from user input
             x = x * 2;//multiply the variable by 2
-            txtOutput.Text = x.ToString();
+            txtOutput.Text = x.ToString();//output the variable
         }
     }
 }
